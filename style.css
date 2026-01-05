@@ -24,6 +24,7 @@ body {
   border-radius: 14px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
   text-align: center;
+  font-size: 16px; /* base font-size */
 }
 
 /* 🖼 Hero Image */
@@ -38,33 +39,35 @@ body {
 .card h2 {
   color: #1a73e8;
   margin-bottom: 8px;
+  font-size: 22px; /* larger heading for mobile readability */
 }
 
 .card p {
   color: #555;
-  font-size: 14px;
+  font-size: 16px; /* increase paragraph size for mobile */
   margin-bottom: 20px;
 }
 
 /* 📁 File Input */
 input[type="file"] {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
   margin-bottom: 15px;
+  font-size: 16px; /* readable input text */
 }
 
 /* 🔘 Buttons */
 button {
-  
   background: #1a73e8;
   color: #ffffff;
   border: none;
-  padding: 12px;
+  padding: 14px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 16px; /* bigger tap area for phones */
+  width: 100%; /* full width for mobile friendliness */
 }
 
 button:hover {
@@ -75,7 +78,7 @@ button:hover {
 .progress {
   width: 100%;
   background: #e0e0e0;
-  height: 16px;
+  height: 18px;
   border-radius: 10px;
   margin-top: 20px;
   overflow: hidden;
@@ -93,16 +96,30 @@ button:hover {
 #status {
   margin-top: 15px;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 16px; /* larger for readability on phones */
 }
 
 /* 📱 Mobile Optimization */
 @media (max-width: 480px) {
   .card {
-    padding: 22px;
+    padding: 24px;
+    max-width: 90%; /* almost full screen */
   }
 
   .hero img {
-    max-height: 140px;
+    max-height: 160px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .card p, input[type="file"], #status {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 16px;
   }
 }
