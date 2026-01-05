@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🌐 Page Layout */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #e8f0fe, #f2f5f9);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 🧱 Main Card */
+.card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  text-align: center;
+}
+
+/* 🖼 Hero Image */
+.hero img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* 🔷 Headings */
+.card h2 {
+  color: #1a73e8;
+  margin-bottom: 8px;
+}
+
+.card p {
+  color: #555;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* 📁 File Input */
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+/* 🔘 Buttons */
+button {
+  
+  background: #1a73e8;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+button:hover {
+  background: #1558b0;
+}
+
+/* 📊 Progress Bar */
+.progress {
+  width: 100%;
+  background: #e0e0e0;
+  height: 16px;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+#bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #34a853, #0f9d58);
+  border-radius: 10px;
+  transition: width 0.6s ease;
+}
+
+/* 📝 Status Text */
+#status {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 📱 Mobile Optimization */
+@media (max-width: 480px) {
+  .card {
+    padding: 22px;
+  }
+
+  .hero img {
+    max-height: 140px;
+  }
+}
