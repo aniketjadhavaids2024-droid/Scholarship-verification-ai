@@ -18,42 +18,42 @@ body {
 /* 🧱 Main Card */
 .card {
   width: 100%;
-  max-width: 600px;  /* Increased card width */
+  max-width: 700px;        /* Increased width */
   background: #ffffff;
-  padding: 40px;      /* Increased padding */
-  border-radius: 16px;
-  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+  padding: 50px;            /* Increased padding */
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.18);
   text-align: center;
-  font-size: 18px;   /* Base font size */
+  font-size: 20px;          /* Base font size increased */
 }
 
 /* 🖼 Hero Image */
 .hero img {
   width: 100%;
-  max-height: 220px;  /* Bigger image */
+  max-height: 240px;        /* Larger image */
   object-fit: contain;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 /* 🔷 Headings */
 .card h2 {
   color: #1a73e8;
-  margin-bottom: 12px;
-  font-size: 28px;   /* Bigger heading */
+  margin-bottom: 15px;
+  font-size: 32px;          /* Bigger heading */
 }
 
 .card p {
   color: #555;
-  font-size: 18px;   /* Bigger paragraph */
-  margin-bottom: 25px;
+  font-size: 20px;          /* Bigger paragraph text */
+  margin-bottom: 30px;
 }
 
 /* 📁 File Input */
 input[type="file"] {
   width: 100%;
-  padding: 14px;     /* Bigger input */
+  padding: 16px;             /* Bigger input */
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 10px;
   margin-bottom: 20px;
   font-size: 18px;
 }
@@ -63,11 +63,11 @@ button {
   background: #1a73e8;
   color: #ffffff;
   border: none;
-  padding: 16px 20px;   /* Bigger buttons */
-  border-radius: 10px;
+  padding: 18px 22px;       /* Bigger buttons */
+  border-radius: 12px;
   cursor: pointer;
-  font-size: 18px;      /* Bigger text */
-  width: 100%;           /* Full width for mobile friendliness */
+  font-size: 20px;          /* Bigger text */
+  width: 100%;
   margin-bottom: 15px;
 }
 
@@ -79,7 +79,7 @@ button:hover {
 .progress {
   width: 100%;
   background: #e0e0e0;
-  height: 22px;   /* Bigger progress bar */
+  height: 24px;             /* Thicker progress bar */
   border-radius: 12px;
   margin-top: 25px;
   overflow: hidden;
@@ -95,29 +95,29 @@ button:hover {
 
 /* 📝 Status Text */
 #status {
-  margin-top: 20px;
+  margin-top: 22px;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;           /* Bigger status text */
   white-space: pre-line;
 }
 
 /* 📱 Mobile Optimization */
 @media (max-width: 480px) {
   .card {
-    padding: 32px;
-    max-width: 95%;  /* Almost full width */
+    padding: 40px;
+    max-width: 95%;
   }
 
   .hero img {
-    max-height: 180px;
+    max-height: 200px;
   }
 
   .card h2 {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .card p, input[type="file"], #status {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   button {
