@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Scholarship Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h2>Upload Scholarship Document</h2>
+
+  <input type="file" id="fileInput" accept=".pdf,.jpg,.png"><br><br>
+  <button onclick="uploadAndVerify()">Upload & Verify</button>
+
+  <div class="progress">
+    <div id="bar"></div>
+  </div>
+
+  <p id="status"></p>
+</div>
+
+
+<script type="module" src="script.js"></script>
+<script>
+  const isGuest = sessionStorage.getItem("guest");
+
+onAuthStateChanged(auth, (user) => {
+  if (!user && !isGuest) {
+    window.location.href = "index.html";
+  }
+});
+function geminiExplain(issues) {
+  if (issues.length === 0) {
+    return "The document meets all scholarship requirements and has been successfully verified.";
+  }
+
+  let explanation = "The uploaded document has the following issues:\n\n";
+
+  issues.forEach(issue => {
+    if (issue.includes("income")) {
+      explanation += "• Income certificate is missing, which is mandatory to verify eligibility.\n";
+    }
+    if (issue.includes("caste")) {
+      explanation += "• Caste certificate is required for category-based scholarships.\n";
+    }
+    if (issue.includes("signature")) {
+      explanation += "• Student signature is not found, making the application invalid.\n";
+    }
+    if (issue.includes("college")) {
+      explanation += "• College name is not clearly mentioned.\n";
+    }
+    if (issue.includes("aadhaar")) {
+      explanation += "• Aadhaar number is missing or invalid.\n";
+    }
+  });
+
+  explanation += "\nPlease upload the correct and complete scholarship application form.";
+
+  return explanation;
+}
+</script>
+</body>
+</html>
